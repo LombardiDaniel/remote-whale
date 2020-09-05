@@ -52,13 +52,20 @@ Before running the Remote-Whale script, you will need to have a few things enabl
 * [vieux/docker-volume-sshfs](https://github.com/vieux/docker-volume-sshfs)
 
 #### Installation
-As of now, Remote-Whale is nothing but script files. After installing the dependencies, you'll need to run the setup. To do so, run:
+As of now, Remote-Whale is nothing but script files. After installing the dependencies, you'll need to run the installation script. To do so, run:
 ```sh
-chmod +x setup.sh && ./setup2.sh
+git clone https://github.com/LombardiDaniel/remote-whale.git
+
+cd remote-whale
+
+chmod +x install-remote-whale.sh && ./install-remote-whale.sh
 ```
 
 
-To use it, all you have to do is place `run.sh` and `run2.sh` inside you project folder and run `run.sh`. You can do that by:
+To use it, all you have to do is use the  `-n` flag and specify the base image docker will pull from [docker-hub](https://hub.docker.com) to build your container.
+For Archlinux, it would look like:
 ```sh
-chmod +x run.sh && ./run.sh
+remote-whale -n archlinux
 ```
+#### Installation
+* Hat tip to everyone who's code I used!
